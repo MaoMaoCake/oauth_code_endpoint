@@ -15,4 +15,4 @@ async def success():
 @app.get("/callback")
 def callback(code: str):
     print(f"code: {code}")
-    return RedirectResponse(url="/success")
+    return {"Received Code": code}
